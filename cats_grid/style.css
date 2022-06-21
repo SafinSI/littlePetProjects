@@ -1,0 +1,206 @@
+body{
+	margin: 0px;
+	font-family: sans-serif;
+}
+.wrapper {
+	margin: 0px auto;
+	max-width: 1600px;
+	min-height: 100vh;
+	display: grid;
+	grid-template: 100px 1fr minmax(70px, auto)/ 1fr;
+	grid-template-areas: 'header' 'main' 'footer';
+	align-items: start;
+	background-color: #e3e3e3;
+}
+.header {
+	background-color: #e3e3e3;
+	grid-area: header;
+}
+
+.main-logo {
+	text-align: center;
+}
+.main {
+	grid-area: main;
+	display: grid;
+	grid-template: 1fr / 0.05fr minmax(auto, 200px) 1fr minmax(auto, 280px) 0.05fr;
+	grid-gap: 10px;
+}
+
+input:not([id="sort"]){
+	display: none;
+	appearance: none;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+}
+
+.cat-types {
+	background-color: #c4c4c4;
+	grid-column: 2/3;
+	display: grid;
+	grid-template: repeat(4, 50px) / 1fr;
+	align-items: center;
+}
+.cat-types label {
+	padding: 15px 0px 14px 15px;
+	font-size: 20px;
+	border-bottom: 1px solid #7a7a7a;
+}
+#Абиссинская:checked ~ .cat-types label[for="Абиссинская"], 
+#Сиамская:checked ~ .cat-types label[for="Сиамская"],
+#Полосатая:checked ~ .cat-types label[for="Полосатая"],
+#Русская:checked ~ .cat-types label[for="Русская"]{
+	background-color: #5c5c5c;
+	color: #f2f2f2;
+}
+
+.cat-cards {
+	display: grid;
+	grid-gap: 10px;
+	grid-template: auto / 1fr 1fr 1fr;
+	grid-column: 3/4;
+}
+.card {
+	position: relative;
+	height: 250px;
+}
+
+.card__photo .photo{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: top;
+}
+.card:hover::after { 
+ 	content: attr(data-title);
+ 	position: absolute;
+    left: 0;
+    bottom: 10%; 
+    z-index: 1; 
+    background-color: rgba(200, 200, 200, 0.5);
+    color: #fff;
+    font-size: 18px;
+    padding: 10px;
+    
+}
+.card_width-1{
+	grid-column: span 1;
+}
+.card_width-2{
+	grid-column: span 2;
+}
+.card_width-3{
+	grid-column: span 3;
+}
+
+.cat-ratings {
+	height: 320px;
+	background-color: #c4c4c4;
+	padding: 5px 15px;
+	grid-column: 4/5;
+}
+.cat-ratings h2{
+	margin: 0px;
+	color: #bd2f2f;
+	font-weight: normal;
+	font-size: 25px;
+}
+.ratings-wrapper{
+	display: flex;
+	flex-direction: column;
+}
+.rating {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	padding: 10px 20px 0px 0px;
+}
+.rating__name {
+	width: 100%;
+	line-height: 35px;
+	font-size: 18px;
+}
+.rating__line {
+	height: 17px;
+	width: 100px;
+	border: 0.5px solid #7a7a7a;
+}
+.rating__line[data-value="4"]{
+	background: linear-gradient(90deg, #e81034, #e81034, #fff);
+	width: 72px;
+}
+.rating__line[data-value="8"]{
+	background: linear-gradient(90deg, #e8d610, #e8d610, #fff);
+	width: 144px;
+}
+.rating__line[data-value="9"]{
+	background: linear-gradient(90deg, #62d10d, #62d10d, #fff);
+	width: 162px;
+}
+.rating__line[data-value="10"]{
+	background: linear-gradient(90deg, #62d10d, #62d10d, #fff);
+	width: 180px;
+}
+.rating__value {
+	font-weight: bold;
+}
+#sort{
+	margin: 0px;
+}
+
+#sort:checked ~.ratings-wrapper .rating[data-value="10"]{
+	order: 1;
+}
+#sort:checked ~.ratings-wrapper .rating[data-value="9"]{
+	order: 2;
+}
+#sort:checked ~.ratings-wrapper .rating[data-value="8"]{
+	order: 3;
+}
+#sort:checked ~.ratings-wrapper .rating[data-value="4"]{
+	order: 4;
+}
+
+.underline{
+	padding-top: 70px;
+	grid-row: 1;
+	grid-column: 1/6;
+
+}
+.underline hr{
+	border: none;
+    background-color: #b3b3b3; 
+    height: 2.5px;
+}
+.footer {
+	background-color: #e3e3e3;
+	grid-area: footer;
+	display: grid;
+	align-items: center;
+	grid-template: 50px 60px / 0.05fr minmax(auto, 300px) 1fr minmax(auto, 280px) 0.05fr;
+	grid-gap: 10px;
+}
+.footer__company {
+	grid-row: 2;
+	grid-column: 2/3;
+}
+.footer__adress {
+	grid-row: 2;
+	grid-column: 4/5;
+}
+
+#Абиссинская:checked ~ .cat-cards > .card >.card__photo > img:not([alt="Абиссинская"]),
+#Полосатая:checked ~ .cat-cards > .card >.card__photo > img:not([alt="Полосатая"]),
+#Русская:checked ~ .cat-cards > .card >.card__photo > img:not([alt="Русская"]),
+#Сиамская:checked ~ .cat-cards > .card >.card__photo > img:not([alt="Сиамская"]){
+	opacity: 0.4;
+}
+#Абиссинская:checked ~ .cat-cards > .card >.card__photo > img[alt="Абиссинская"],
+#Полосатая:checked ~ .cat-cards > .card >.card__photo > img[alt="Полосатая"],
+#Русская:checked ~ .cat-cards > .card >.card__photo > img[alt="Русская"],
+#Сиамская:checked ~ .cat-cards > .card >.card__photo > img[alt="Сиамская"]{
+	opacity: 1;
+}

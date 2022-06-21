@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+    	<title>Мяндекс Муррркет</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+    	<wrapper class="wrapper">
+    		<header class="header">
+    			<h1 class="main-logo">Мяндекс Муррркет</h1>
+    		</header>
+
+    		<main class="main">
+    			<input type="checkbox" id="Абиссинская">
+    			<input type="checkbox" id="Полосатая">
+    			<input type="checkbox" id="Русская">
+    			<input type="checkbox" id="Сиамская">
+
+    			<nav class="cat-types">
+					<label for="Абиссинская">Абиссинская</label>
+					<label for="Полосатая">Полосатая кошка</label>
+					<label for="Русская">Русская голубая</label>
+					<label for="Сиамская">Сиамская</label>
+    			</nav>
+
+    			<section class="cat-cards">
+    				<div class="card card_width-1" data-title="Гоша, 2 года">
+	    				<picture class="card__photo" >
+							<img class="photo" src="photo/cat2.jpg" alt="Русская">
+						</picture>	
+    				</div>
+
+    				<div class="card card_width-2" data-title="Васка, 3 года">
+	    				<picture class="card__photo">
+							<img class="photo" src="photo/cat1.jpg" alt="Полосатая">
+						</picture>	
+    				</div>
+
+    				<div class="card card_width-1" data-title="Матильда, 1 год">
+	    				<picture class="card__photo">
+							<img class="photo" src="photo/cat3.jpg" alt="Сиамская">
+						</picture>	
+    				</div>
+
+    				<div class="card card_width-1" data-title="Шлёпа, 7 месяцев">
+	    				<picture class="card__photo">
+							<img class="photo" src="photo/cat11.jpg" alt="Абиссинская">
+						</picture>	
+    				</div>
+
+    				<div class="card card_width-1" data-title="Рыжик, 4 года">
+	    				<picture class="card__photo">
+							<img class="photo" src="photo/cat5.jpg" alt="Полосатая">
+						</picture>	
+    				</div>
+
+    				<div class="card card_width-2" data-title="Маша, 1 год">
+	    				<picture class="card__photo">
+							<img class="photo" src="photo/cat10.jpg" alt="Сиамская">
+						</picture>	
+    				</div>
+
+    				<div class="card card_width-1" data-title="Петрик, 2 года">
+	    				<picture class="card__photo">
+							<img class="photo" src="photo/cat7.jpg" alt="Полосатая">
+						</picture>	
+    				</div>
+
+    				<div class="card card_width-3" data-title="Мурзик, 1 год">
+	    				<picture class="card__photo">
+							<img class="photo" src="photo/cat9.jpg" alt="Абиссинская">
+						</picture>	
+    				</div>
+    			</section>
+
+    			<aside class="cat-ratings">
+    				<h2>РЕЙТИНГ</h2>
+
+    				<input type="checkbox" id="sort">
+					<label for="sort">по убыванию</label>
+
+					<div class="ratings-wrapper">
+						<div class="rating" data-value="9">
+							<figcaption class="rating__name">Абиссинская</figcaption>
+							<div class="rating__line" data-value="9"></div>
+							<span class="rating__value">9</span>
+						</div>
+
+						<div class="rating" data-value="8">
+							<figcaption class="rating__name">Полосатая</figcaption>
+							<div class="rating__line" data-value="8"></div>
+							<span class="rating__value">8</span>
+						</div>
+
+						<div class="rating" data-value="10">
+							<figcaption class="rating__name">Русская</figcaption>
+							<div class="rating__line" data-value="10"></div>
+							<span class="rating__value">10</span>
+						</div>
+
+						<div class="rating" data-value="4">
+							<figcaption class="rating__name">Сиамская</figcaption>
+							<div class="rating__line" data-value="4"></div>
+							<span class="rating__value">4</span>
+						</div>
+					</div>
+    			</aside>
+    		</main>
+
+    		<footer class="footer">
+    			<div class="underline">
+    				<hr>
+    			</div>
+	    		<div class="footer__company">
+					&copy; ООО Бабуленькины котятки, 2015
+				</div>
+				<div class="footer__adress">
+					Наш адрес: улица Котовая, д.5
+				</div>
+    		</footer>
+    		
+    	</wrapper>
+    </body>
+</html>

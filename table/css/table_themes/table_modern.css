@@ -1,0 +1,37 @@
+.table {
+    width: 100%;
+    table-layout: fixed;
+    white-space: nowrap;
+    font-size: 13px;
+    line-height: 15px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: rgba(0, 0, 0, 0.54);
+    border-collapse: collapse;
+}
+
+.table-header{
+    color: rgba(0, 0, 0, 0.56);
+}
+
+.table-row {
+    height: 56px;
+    left: 24px;
+    top: 238px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+    color: rgba(0, 0, 0, 0.87);
+}
+
+.table-row-cell {
+   overflow: hidden;
+   white-space: nowrap;
+   padding: 10px 5px;
+}
+
+.table-header-cell {
+   height: 56px;
+   left: 24px;
+   top: 238px;
+   border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+   color: rgba(0, 0, 0, 0.87);
+}

@@ -1,0 +1,20 @@
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    white-space: nowrap;
+}
+
+.table-row-cell {
+    padding: 3px;
+    border: 1px solid black;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.table-header-cell {
+   padding: 3px;
+   overflow: hidden;
+   border: 1px solid black;
+   background: #b0e0e6;
+};
